@@ -1,0 +1,2 @@
+# skeleton
+Hugo theme
