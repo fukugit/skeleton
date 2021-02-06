@@ -1,0 +1,29 @@
+<article>
+  {{ if .Params.thumbnail }}
+  <figure>
+    <a href="{{ .Permalink }}">
+      <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
+    </a>
+  </figure>
+  {{ end }}
+
+  <header>
+    <a href="{{.Permalink}}">{{.Date.Format "2006/01/02"}}</a>
+    <h2>
+      <a href="{{ .RelPermalink }}" >{{ .Title }}</a>
+    </h2>
+    {{ with .Params.lead }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </header>
+  <div>
+    {{ .Summary }}
+  </div>
+  {{ if .Site.Params.readmore }}
+  {{ if .Truncated }}
+  <div>
+    <a href="{{ .RelPermalink }}">{{ T "read_more" }}</a>
+  </div>
+  {{ end }}
+  {{ end }}
+</article>
