@@ -1,4 +1,4 @@
-<article>
+<article class="summary">
   {{ if .Params.thumbnail }}
   <figure>
     <a href="{{ .Permalink }}">
@@ -8,22 +8,17 @@
   {{ end }}
 
   <header>
-    <a href="{{.Permalink}}">{{.Date.Format "2006/01/02"}}</a>
-    <h2>
-      <a href="{{ .RelPermalink }}" >{{ .Title }}</a>
-    </h2>
-    {{ with .Params.lead }}
-    <p>{{ . }}</p>
-    {{ end }}
+    <h2> <a href="{{ .RelPermalink }}" >{{ .Title }}</a> </h2>
+    <p class="date">{{.Date.Format "2006/01/02"}}</p>
   </header>
-  <div>
+  <div class="summary-contant">
     {{ .Summary }}
   </div>
   {{ if .Site.Params.readmore }}
-  {{ if .Truncated }}
-  <div>
-    <a href="{{ .RelPermalink }}">{{ T "read_more" }}</a>
-  </div>
+    {{ if .Truncated }}
+    <div>
+      <a href="{{ .RelPermalink }}">{{ T "read_more" }}</a>
+    </div>
   {{ end }}
   {{ end }}
 </article>
