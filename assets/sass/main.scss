@@ -1,12 +1,15 @@
 $color-base:#2694ab;
 $color-contents: #e59572;
-$color-navi: #e5cabe;
+$color-navi: #74615a;
 $color-title:#f6f6e9;
+$color-font:#f6f6e9;
+$color-link:#d8d8c2;
 
 @import "https://unpkg.com/ress/dist/ress.min.css";
 
 body {
   background-color: $color-base;
+  color: $color-font;
   .header {
     color: $color-title;
     width: 1000px;
@@ -24,6 +27,7 @@ body {
       width: 74%;
       padding: 10px;
       box-sizing: border-box;
+      position: relative;
       .summary {
         padding-left: 10px;
         margin-bottom: 20px;
@@ -31,17 +35,37 @@ body {
           display: inline-block;
           margin-bottom: 0;
         }
-        .date {
-          padding-left: 10px;
-          font-size: 0.8rem;
-          display: inline-block;
+        header {
+          display: flex;
+          justify-content:space-between;
+          align-items: center;
+          h2 {
+            max-width: 70%;
+            height: auto;
+          }
+          .date {
+            padding-top: 20px;
+            padding-left: 20px;
+            font-size: 0.8rem;
+            box-sizing: border-box;
+          }
         }
         .summary-contant {
           padding-left: 30px;
         }
+      }/* summary */
+      .pager-layout {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 10px;
+      }
+      .pager {
+        width: auto;
       }
 
-    }
+    }/* list */
+
     .main {
       background-color: $color-contents;
       width: 74%;
@@ -69,5 +93,6 @@ body {
   }
   a {
     text-decoration: none;
+    color: $color-link;
   }
 }
