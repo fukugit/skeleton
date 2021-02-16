@@ -1,9 +1,12 @@
-$color-base:#2694ab;
-$color-contents: #e59572;
-$color-navi: #74615a;
+$color-base:#2f3131;
+$color-contents: #3d4141;
+$color-navi: #3d4141;
 $color-title:#f6f6e9;
 $color-font:#f6f6e9;
-$color-link:#d8d8c2;
+$color-font-black:#2f3131;
+$color-font-back:#b8b8b3;
+$color-link:#fafaf3;
+$color-link-hover:#e9d1f3;
 
 @import "https://unpkg.com/ress/dist/ress.min.css";
 
@@ -117,18 +120,18 @@ body {
       }
 
       a {
-        color: #000;
-        text-decoration: none;
+        color: $color-link;
+        text-decoration: underline;
       }
 
       a:hover {
-        color: #dadada;
+        color: $color-link-hover;
       }
 
       hr {
         margin: 0 0 20px;
         border: 0;
-        border-top: 1px solid #dadada;
+        border-top: 1px solid $color-font-black;
       }
 
       p {
@@ -154,7 +157,7 @@ body {
       }
 
       mark {
-        background-color: #fd5;
+        background-color: $color-font-back;
       }
 
       figure {
@@ -165,7 +168,6 @@ body {
       figcaption {
         margin-top: 4px;
         margin-top: .25rem;
-        color: #666;
       }
 
       figcaption h4 {
@@ -182,7 +184,7 @@ body {
 
       pre,
       code {
-        background-color: #f5f5f5;
+        background-color: $color-font-back;
       }
 
       code {
@@ -196,7 +198,7 @@ body {
         margin-bottom: 20px;
         margin-bottom: 1.25rem;
         overflow: auto;
-        color: #000;
+        color: $color-font-black;
       }
 
       pre code {
@@ -209,8 +211,7 @@ body {
 
       kbd {
         padding: 2px 3px;
-        color: #fff;
-        background-color: #2a2a2a;
+        background-color: $color-font-back;
       }
 
       blockquote {
@@ -219,7 +220,7 @@ body {
         margin: 0 0 20px;
         margin: 0 0 1.25rem;
         line-height: 1.6;
-        border-left: 5px solid #2a2a2a;
+        border-left: 5px solid $color-font-back;
       }
 
       blockquote p:last-child {
@@ -248,7 +249,6 @@ body {
       abbr[title] {
         text-decoration: none;
         cursor: help;
-        border-bottom: 1px dotted #000;
       }
 
       q {
