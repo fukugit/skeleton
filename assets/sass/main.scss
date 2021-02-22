@@ -5,8 +5,8 @@ $color-title:#f6f6e9;
 $color-font:#f6f6e9;
 $color-font-black:#2f3131;
 $color-font-back:#b8b8b3;
-$color-link:#fafaf3;
-$color-link-hover:#e9d1f3;
+$color-link:#fcfbc5;
+$color-link-hover:#e63176;
 
 @import "https://unpkg.com/ress/dist/ress.min.css";
 
@@ -293,6 +293,31 @@ body {
       width: 26%;
       padding: 10px;
       box-sizing: border-box;
+      .title {
+        width: 100%;
+        padding: 0 10px 0 10px;
+        box-sizing: border-box;
+        background-color: $color-font-back;
+        margin-bottom: 5px;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title:hover {
+        background-color: $color-link-hover;
+      }
+      .tag {
+        display: inline-block;
+        margin: 0 0 5px 0;
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: $color-font-back;
+      }
+      .tag:hover {
+        background-color: $color-link-hover;
+      }
     }
   }
 

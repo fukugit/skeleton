@@ -5,7 +5,9 @@
   {{ if gt (len $menus) 0 }}
     <h2>Menus</h2>
     {{ range $menus }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
+      <div class="title">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </div>
     {{ end }}
   {{ end }}
 
@@ -15,7 +17,9 @@
   {{ if $recent }}
     <h2>Recent</h2>
     {{ range first $recent_num $recent }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <div class="title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
     {{ end }}
   {{ end }}
 
@@ -25,7 +29,7 @@
     <h2>Categoris</h2>
     {{ range $name, $taxonomy := $categories }}
     {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="tag">{{ .Title }}</a>
     {{ end }}
     {{ end }}
   {{ end }}
@@ -36,7 +40,7 @@
     <h2>Tags</h2>
     {{ range $name, $taxonomy := $tags }}
     {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-    <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+    <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="tag">
       {{ .Title }}{{ if .Site.Params.widgets.tags_counter }} ({{ $taxonomy.Count }}){{ end }}
     </a>
     {{ end }}
