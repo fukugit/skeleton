@@ -58,6 +58,15 @@ body {
         }
         .summary-contant {
           padding-left: 30px;
+          display: flex;
+          flex-direction: column;
+          .image {
+            margin-top: 5px;
+            width: 60%;
+          }
+          .sentence {
+            width: 100%;
+          }
         }
       }/* summary */
       .pager-layout {
