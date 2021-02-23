@@ -1,0 +1,27 @@
+<article class="summary">
+
+
+  <header>
+    <h2> <a href="{{ .RelPermalink }}" >{{ .Title }}</a> </h2>
+    <p class="date">{{.Date.Format "2006/01/02"}}</p>
+  </header>
+  <div class="summary-contant">
+    <div class="sentence">
+      {{ .Summary }}
+    </div>
+    <div class="image">
+      {{ if .Params.thumbnail }}
+        <a href="{{ .Permalink }}">
+          <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
+        </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ if .Site.Params.readmore }}
+    {{ if .Truncated }}
+    <div>
+      <a href="{{ .RelPermalink }}">{{ T "read_more" }}</a>
+    </div>
+    {{ end }}
+  {{ end }}
+</article>

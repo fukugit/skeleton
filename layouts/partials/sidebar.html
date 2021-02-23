@@ -1,0 +1,60 @@
+
+<!-- sidebar start -->
+<aside class="sidebar">
+  {{ if .Site.Menus }}
+    {{ $menus := .Site.Menus.main }}
+    {{ if gt (len $menus) 0 }}
+      <div class="head">
+        Menus
+      </div>
+      {{ range $menus }}
+        <div class="title">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+
+  {{ $recent := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $recent_num := (.Site.Params.widgets.recent_num | default 10) }}
+  {{ if $recent }}
+    <div class="head">
+      Recent
+    </div>
+    {{ range first $recent_num $recent }}
+      <div class="title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
+    {{ end }}
+  {{ end }}
+
+
+  {{ $categories := .Site.Taxonomies.categories }}
+  {{ if gt (len $categories) 0 }}
+    <div class="head">
+      Categoris
+    </div>
+    {{ range $name, $taxonomy := $categories }}
+    {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+      <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="tag">{{ .Title }}</a>
+    {{ end }}
+    {{ end }}
+  {{ end }}
+
+
+  {{ $tags := .Site.Taxonomies.tags }}
+  {{ if gt (len $tags) 0 }}
+    <div class="head">
+      Tags
+    </div>
+    {{ range $name, $taxonomy := $tags }}
+    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+    <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="tag">
+      {{ .Title }}{{ if .Site.Params.widgets.tags_counter }} ({{ $taxonomy.Count }}){{ end }}
+    </a>
+    {{ end }}
+  {{ end }}
+  {{ end }}
+
+</aside>
