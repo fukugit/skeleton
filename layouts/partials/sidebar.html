@@ -1,13 +1,15 @@
 
 <!-- sidebar start -->
 <aside class="sidebar">
-  {{ $menus := .Site.Menus.main }}
-  {{ if gt (len $menus) 0 }}
-    <h2>Menus</h2>
-    {{ range $menus }}
-      <div class="title">
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      </div>
+  {{ if .Site.Menus }}
+    {{ $menus := .Site.Menus.main }}
+    {{ if gt (len $menus) 0 }}
+      <h2>Menus</h2>
+      {{ range $menus }}
+        <div class="title">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </div>
+      {{ end }}
     {{ end }}
   {{ end }}
 

@@ -53,6 +53,9 @@ body {
             box-sizing: border-box;
           }
         }
+        img {
+          width: 100%;
+        }
         .summary-contant {
           padding-left: 30px;
         }
@@ -283,6 +286,10 @@ body {
 
       select {
         max-width: 100%;
+      }
+
+      img {
+        width: 100%;
       }
       /* end Typography */
 
