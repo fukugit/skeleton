@@ -3,7 +3,7 @@
   <div class="pager">
     <a href="{{ .Paginator.First.URL }}">First</a>
     {{ if .Paginator.HasPrev }}
-    <a href="{{ .Paginator.Prev.URL }}">«</a>
+    <a href="{{ .Paginator.Prev.URL }}">&lt;&lt;&lt;</a>
     {{ end }}
 
     <span>
@@ -11,7 +11,7 @@
     </span>
 
     {{ if .Paginator.HasNext }}
-    <a href="{{ .Paginator.Next.URL }}">»</a>
+    <a href="{{ .Paginator.Next.URL }}">&gt;&gt;&gt;</a>
     {{ end }}
     <a href="{{ .Paginator.Last.URL }}">Last</a>
   </div>

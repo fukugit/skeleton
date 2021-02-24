@@ -77,6 +77,10 @@ body {
       }
       .pager {
         width: auto;
+        a {
+          text-decoration:solid;
+          color: $color-link;
+        }
       }
 
     }/* list */
@@ -147,7 +151,6 @@ body {
       }
 
       p {
-        margin: 0 0 20px;
         margin: 0 0 1.25rem;
       }
 
@@ -208,7 +211,7 @@ body {
         padding: 0;
         padding: 1.25rem;
         margin-bottom: 20px;
-        margin-bottom: 1.25rem;
+        margin-bottom: 2.05rem;
         overflow: auto;
         color: $color-font-black;
       }
@@ -299,6 +302,9 @@ body {
 
       img {
         width: 100%;
+        margin-top: 0.501rem;
+        margin-bottom: 20px;
+        margin-bottom: 1.85rem;
       }
       /* end Typography */
 
