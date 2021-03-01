@@ -3,9 +3,11 @@
 <main class="list">
   <h2>{{.Title}}</h2>
   <!-- Ranges through content/posts/*.md -->
-  {{- range .Paginator.Pages }}
-    {{- .Render "summary" }}
-  {{- end }}
+  <div class="summary-list">
+    {{- range .Paginator.Pages }}
+      {{- .Render "summary" }}
+    {{- end }}
+  </div>
 
   {{ partial "pagination.html" . }}
 

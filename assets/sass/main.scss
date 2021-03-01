@@ -1,12 +1,23 @@
-$color-base:#2f3131;
-$color-contents: #3d4141;
-$color-navi: #3d4141;
-$color-title:#f6f6e9;
-$color-font:#f6f6e9;
+// $color-base:#2f3131;
+// $color-contents: #3d4141;
+// $color-navi: #3d4141;
+// $color-title:#f6f6e9;
+// $color-font:#f6f6e9;
+// $color-font-black:#2f3131;
+// $color-font-back:#b8b8b3;
+// $color-link:#fcfbc5;
+// $color-link-hover:#e63176;
+
+$color-base:#fff;
+$color-contents: #fff;
+$color-navi: #fff;
+$color-title:#3d4141;
+$color-font:#3d4141;
+$color-font-white:#fff;
 $color-font-black:#2f3131;
-$color-font-back:#b8b8b3;
-$color-link:#fcfbc5;
-$color-link-hover:#e63176;
+$color-font-back:#17223b;
+$color-link:#2f3131;
+$color-link-hover:#ff6768;
 
 @import "https://unpkg.com/ress/dist/ress.min.css";
 
@@ -31,44 +42,47 @@ body {
       padding: 10px;
       box-sizing: border-box;
       position: relative;
-      .summary {
-        padding-left: 10px;
-        margin-bottom: 20px;
-        h2 {
-          display: inline-block;
-          margin-bottom: 0;
-        }
-        header {
-          display: flex;
-          justify-content:space-between;
-          align-items: center;
+      .summary-list {
+        margin-bottom: 100px;
+        .summary {
+          padding-left: 10px;
+          margin-bottom: 40px;
           h2 {
-            max-width: 70%;
-            height: auto;
+            display: inline-block;
+            margin-bottom: 0;
           }
-          .date {
-            padding-top: 20px;
-            padding-left: 20px;
-            font-size: 0.8rem;
-            box-sizing: border-box;
+          header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            h2 {
+              height: auto;
+            }
+            .date {
+              padding-top: 5px;
+              padding-left: 5px;
+              font-size: 0.8rem;
+              box-sizing: border-box;
+            }
           }
-        }
-        img {
-          width: 100%;
-        }
-        .summary-contant {
-          padding-left: 30px;
-          display: flex;
-          flex-direction: column;
-          .image {
-            margin-top: 5px;
-            width: 60%;
-          }
-          .sentence {
+          img {
             width: 100%;
           }
-        }
-      }/* summary */
+          .summary-contant {
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            .image {
+              margin-top: 5px;
+              width: 60%;
+            }
+            .sentence {
+              width: 100%;
+            }
+          }
+        }/* summary */
+      }
+
       .pager-layout {
         position: absolute;
         width: 100%;
@@ -173,6 +187,7 @@ body {
 
       mark {
         background-color: $color-font-back;
+        color: $color-font-white;
       }
 
       figure {
@@ -200,6 +215,7 @@ body {
       pre,
       code {
         background-color: $color-font-back;
+        color: $color-font-white;
       }
 
       code {
@@ -227,6 +243,7 @@ body {
       kbd {
         padding: 2px 3px;
         background-color: $color-font-back;
+        color: $color-font-white;
       }
 
       blockquote {
@@ -315,6 +332,10 @@ body {
       width: 26%;
       padding: 10px;
       box-sizing: border-box;
+      a {
+        color: $color-font-white;
+        font-size: 0.7rem;
+      }
       .title {
         width: 100%;
         padding: 0 10px 0 10px;
