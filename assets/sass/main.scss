@@ -22,9 +22,25 @@ $color-font-code:#fff; /* font color of pre. */
 
 $color-link:#2f3131;
 $color-link-hover:#ff6768;
-$color-border:#17223b;
+$color-border:#cfcfcf;
+
+$tab: 999px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
 
 @import "https://unpkg.com/ress/dist/ress.min.css";
+
 
 body {
   background-color: $color-bg-base;
@@ -33,6 +49,9 @@ body {
     color: $color-font-title;
     width: 1000px;
     margin: 20px auto;
+    @include sp {
+      width: 100%;
+    }
     h1 {
       color: $color-font-title;
     }
@@ -41,12 +60,18 @@ body {
     display: flex;
     width: 1000px;
     margin: 20px auto;
+    @include sp {
+      width: 100%;
+      flex-direction: column;
+    }
     .list {
       background-color: $color-bg-contents;
       width: 74%;
-      padding: 10px;
       box-sizing: border-box;
       position: relative;
+      @include sp {
+        width: 100%;
+      }
       .summary-list {
         margin-bottom: 100px;
         .summary {
@@ -59,6 +84,10 @@ body {
           //   display: inline-block;
           //   margin-bottom: 0;
           // }
+          @include sp {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
           header {
             display: flex;
             flex-direction: column;
@@ -81,9 +110,15 @@ body {
             padding-left: 30px;
             display: flex;
             flex-direction: column;
+            @include sp {
+              padding-left: 0;
+            }
             .image {
               margin-top: 5px;
               width: 60%;
+              @include sp {
+                width: 100%;
+              }
             }
             .sentence {
               width: 100%;
@@ -113,6 +148,9 @@ body {
       width: 74%;
       padding: 10px;
       box-sizing: border-box;
+      @include sp {
+        width: 100%;
+      }
 
       /* Typography */
       h1,
@@ -303,6 +341,15 @@ body {
         line-height: 1.5;
       }
 
+      table {
+        margin-bottom: 20px;
+      }
+      td, th {
+        border: 1px $color-border solid;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+
       dl {
         margin: 0 0 10px 20px;
       }
@@ -334,16 +381,25 @@ body {
         margin-top: 0.501rem;
         margin-bottom: 20px;
         margin-bottom: 1.85rem;
+        @include sp {
+          width: 100%;
+        }
       }
       /* end Typography */
 
     }
     .sidebar {
       background-color: $color-bg-navi;
+      border: $color-border 1px solid;
       margin-left: 10px;
       width: 26%;
       padding: 10px;
       box-sizing: border-box;
+      @include sp {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 10px;
+      }
       a {
         color: $color-font-navi;
         font-size: 0.7rem;
