@@ -8,6 +8,7 @@
 // $color-link:#fcfbc5;
 // $color-link-hover:#e63176;
 
+
 $color-bg-base:#fff; /* background color of site base. */
 $color-bg-contents: #fff; /* background color of contents in list */
 $color-bg-navi: #fff; /* background color of sidebar */
@@ -145,7 +146,7 @@ body {
 
     .main {
       background-color: $color-bg-contents;
-      width: 74%;
+      width: 100%;
       padding: 10px;
       box-sizing: border-box;
       @include sp {
@@ -388,6 +389,9 @@ body {
       /* end Typography */
 
     }
+    /* 
+      tags, etc..
+     */
     .sidebar {
       background-color: $color-bg-navi;
       border: $color-border 1px solid;
@@ -410,6 +414,9 @@ body {
         box-sizing: border-box;
         background-color: $color-bg-navi-title;
         margin-bottom: 5px;
+        @include sp {
+          padding: 10px 10px 10px 10px;
+        }
         a {
           display: block;
           width: 100%;
@@ -425,6 +432,9 @@ body {
         padding: 5px;
         box-sizing: border-box;
         background-color: $color-bg-navi-title;
+        @include sp {
+          padding: 10px 10px 10px 10px;
+        }
       }
       .tag:hover {
         background-color: $color-link-hover;
