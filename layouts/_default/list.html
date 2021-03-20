@@ -1,7 +1,9 @@
 {{ define "main" }}
 
 <main class="list">
-  <h2>{{.Title}}</h2>
+  <div class="summary-title">
+    {{.Title}}
+  </div>
   <!-- Ranges through content/posts/*.md -->
   <div class="summary-list">
     {{- range .Paginator.Pages }}
