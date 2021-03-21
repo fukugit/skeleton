@@ -4,7 +4,9 @@
   {{ if .Site.Menus }}
     {{ $menus := .Site.Menus.main }}
     {{ if gt (len $menus) 0 }}
-      <h2>Menus</h2>
+      <div class="head">
+        Menus
+      </div>
       {{ range $menus }}
         <div class="title">
           <a href="{{ .URL }}">{{ .Name }}</a>
@@ -17,7 +19,9 @@
   {{ $recent := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{ $recent_num := (.Site.Params.widgets.recent_num | default 10) }}
   {{ if $recent }}
-    <h2>Recent</h2>
+    <div class="head">
+      Recent
+    </div>
     {{ range first $recent_num $recent }}
       <div class="title">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -28,7 +32,9 @@
 
   {{ $categories := .Site.Taxonomies.categories }}
   {{ if gt (len $categories) 0 }}
-    <h2>Categoris</h2>
+    <div class="head">
+      Categoris
+    </div>
     {{ range $name, $taxonomy := $categories }}
     {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
       <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="tag">{{ .Title }}</a>
@@ -39,7 +45,9 @@
 
   {{ $tags := .Site.Taxonomies.tags }}
   {{ if gt (len $tags) 0 }}
-    <h2>Tags</h2>
+    <div class="head">
+      Tags
+    </div>
     {{ range $name, $taxonomy := $tags }}
     {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
     <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="tag">
