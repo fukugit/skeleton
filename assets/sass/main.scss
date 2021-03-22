@@ -14,11 +14,13 @@ $color-bg-contents: #fff; /* background color of contents in list */
 $color-bg-navi: #fff; /* background color of sidebar */
 $color-bg-navi-title:#17223b; /* background color of title in navi. */
 $color-bg-code:#4e525c; /* background color of pre. */
+$color-bg-main-title:#17223b; /* background color of title in main contents. */
 
 $color-font-title:#3d4141; /* font color of title like h1 in header. */
 $color-font-base:#3d4141; /* font color, which is base one. */
 $color-font-navi:#fff; /* font color in navi */
 $color-font-code:#fff; /* font color of pre. */
+$color-font-main-title:#fff; /* font color in navi */
 // $color-font-black:#2f3131;
 
 $color-link:#2f3131;
@@ -74,7 +76,7 @@ body {
         width: 100%;
       }
       .summary-title {
-        background-color: $color-bg-navi-title;
+        background-color: $color-bg-main-title;
         color: $color-font-code;
         margin-bottom: 10px;
         vertical-align: top;
@@ -355,6 +357,10 @@ body {
         margin-bottom: 20px;
         width: 100%;
       }
+      th {
+        background-color: $color-bg-main-title;
+        color: $color-font-main-title;
+      }
       td, th {
         border: 1px $color-border solid;
         padding: 10px;
@@ -447,7 +453,7 @@ body {
         margin: 0 0 5px 0;
         padding: 5px;
         box-sizing: border-box;
-        background-color: $color-bg-navi-title;
+        background-color: $color-bg-main-title;
         @include sp {
           padding: 10px 10px 10px 10px;
         }
