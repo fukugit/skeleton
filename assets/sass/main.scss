@@ -15,8 +15,8 @@ $color-link:#2f3131;
 $color-link-hover:#ff6768;
 $color-border:#cfcfcf;
 
-$tab: 999px; // タブレット
-$sp: 480px;  // スマホ
+$tab: 1024px; // タブレット
+$sp: 599px;  // スマホ
 
 @mixin tab {
   @media (max-width: ($tab)) {
@@ -40,6 +40,9 @@ body {
     color: $color-font-title;
     width: 1000px;
     margin: 20px auto;
+    @include tab {
+      width: 100%;
+    }
     @include sp {
       width: 100%;
     }
@@ -54,6 +57,11 @@ body {
     padding-top: 30px;
     margin: 20px auto;
     text-align: left;
+    @include tab {
+      width: 100%;
+      padding-top: 10px;
+      height: 50px;
+    }
     @include sp {
       width: 100%;
       padding-top: 10px;
@@ -67,6 +75,10 @@ body {
     display: flex;
     width: 1000px;
     margin: 20px auto;
+    @include tab {
+      width: 100%;
+      flex-direction: column;
+    }
     @include sp {
       width: 100%;
       flex-direction: column;
@@ -77,6 +89,9 @@ body {
       box-sizing: border-box;
       position: relative;
       @include sp {
+        width: 100%;
+      }
+      @include tab {
         width: 100%;
       }
       .summary-title {
@@ -96,6 +111,10 @@ body {
           box-sizing: border-box;
           margin-bottom: 40px;
           border: $color-border 1px solid;
+          @include tab {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
           @include sp {
             padding-left: 5px;
             padding-right: 5px;
@@ -120,12 +139,18 @@ body {
           .summary-contant {
             display: flex;
             flex-direction: column;
+            @include tab {
+              padding-left: 0;
+            }
             @include sp {
               padding-left: 0;
             }
             .image {
               margin-top: 5px;
               width: 60%;
+              @include tab {
+                width: 100%;
+              }
               @include sp {
                 width: 100%;
               }
@@ -160,6 +185,9 @@ body {
       margin: 0 auto;
       padding: 10px;
       box-sizing: border-box;
+      @include tab {
+        width: 100%;
+      }
       @include sp {
         width: 100%;
       }
@@ -401,6 +429,9 @@ body {
         margin-top: 0.501rem;
         margin-bottom: 20px;
         margin-bottom: 1.85rem;
+        @include tab {
+          width: 100%;
+        }
         @include sp {
           width: 100%;
         }
@@ -417,6 +448,11 @@ body {
       width: 26%;
       padding-left: 10px;
       box-sizing: border-box;
+      @include tab {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 10px;
+      }
       @include sp {
         width: 100%;
         margin-left: 0;
@@ -439,6 +475,9 @@ body {
         box-sizing: border-box;
         background-color: $color-bg-navi-title;
         margin-bottom: 5px;
+        @include tab {
+          padding: 10px 10px 10px 10px;
+        }
         @include sp {
           padding: 10px 10px 10px 10px;
         }
@@ -457,6 +496,9 @@ body {
         padding: 5px;
         box-sizing: border-box;
         background-color: $color-bg-main-title;
+        @include tab {
+          padding: 10px 10px 10px 10px;
+        }
         @include sp {
           padding: 10px 10px 10px 10px;
         }
