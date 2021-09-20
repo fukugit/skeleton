@@ -1,22 +1,11 @@
-$color-bg-base:#fff; /* background color of site base. */
-$color-bg-contents: #fff; /* background color of contents in list */
-$color-bg-navi: #fff; /* background color of sidebar */
-$color-bg-navi-title:#17223b; /* background color of title in navi. */
-$color-bg-code:#4e525c; /* background color of pre. */
-$color-bg-main-title:#17223b; /* background color of title in main contents. */
+/* You can change the following color to change the display color. */
+$color-base:#ffffff; 
+$color-second-base:#17223b;
+$color-third-base:#cfcfcf;
+$color-strong:#ff6768;
 
-$color-font-title:#3d4141; /* font color of title like h1 in header. */
-$color-font-base:#3d4141; /* font color, which is base one. */
-$color-font-navi:#fff; /* font color in navi */
-$color-font-code:#fff; /* font color of pre. */
-$color-font-main-title:#fff; /* font color in navi */
-
-$color-link:#2f3131;
-$color-link-hover:#ff6768;
-$color-border:#cfcfcf;
-
-$tab: 1024px; // タブレット
-$sp: 599px;  // スマホ
+$tab: 1024px; // For Tablet
+$sp: 599px;  // For Smartphone
 
 @mixin tab {
   @media (max-width: ($tab)) {
@@ -30,10 +19,10 @@ $sp: 599px;  // スマホ
 }
 
 body {
-  background-color: $color-bg-base;
-  color: $color-font-base;
+  background-color: $color-base;
+  color: $color-second-base;
   .header {
-    color: $color-font-title;
+    color: $color-second-base;
     width: 1000px;
     margin: 20px auto;
     @include tab {
@@ -43,11 +32,11 @@ body {
       width: 100%;
     }
     h1 {
-      color: $color-font-title;
+      color: $color-second-base;
     }
   }
   .footer {
-    color: $color-font-title;
+    color: $color-second-base;
     width: 1000px;
     height: 200px;
     padding-top: 30px;
@@ -64,7 +53,7 @@ body {
       height: 50px;
     }
     h1 {
-      color: $color-font-title;
+      color: $color-second-base;
     }
   }
   .container {
@@ -80,7 +69,7 @@ body {
       flex-direction: column;
     }
     .list {
-      background-color: $color-bg-contents;
+      background-color: $color-base;
       width: 74%;
       box-sizing: border-box;
       position: relative;
@@ -91,8 +80,8 @@ body {
         width: 100%;
       }
       .summary-title {
-        background-color: $color-bg-main-title;
-        color: $color-font-code;
+        background-color: $color-second-base;
+        color: $color-base;
         margin-bottom: 10px;
         vertical-align: top;
         font-size: 1.8rem;
@@ -106,7 +95,7 @@ body {
           padding-bottom: 10px;
           box-sizing: border-box;
           margin-bottom: 40px;
-          border: $color-border 1px solid;
+          border: $color-third-base 1px solid;
           @include tab {
             padding-left: 5px;
             padding-right: 5px;
@@ -168,14 +157,14 @@ body {
         width: auto;
         a {
           text-decoration:solid;
-          color: $color-link;
+          color: $color-second-base;
         }
       }
 
     }/* list */
 
     .main {
-      background-color: $color-bg-contents;
+      background-color: $color-base;
       // width: 100%;
       width: 800px;
       margin: 0 auto;
@@ -199,7 +188,7 @@ body {
         margin: 0 0 1.25rem;
         font-weight: 700;
         line-height: 1.3;
-        color: $color-font-base;
+        color: $color-second-base;
         margin-top: 80px;
       }
       h1#title{
@@ -237,12 +226,12 @@ body {
       }
 
       a {
-        color: $color-link;
+        color: $color-second-base;
         text-decoration: underline;
       }
 
       a:hover {
-        color: $color-link-hover;
+        color: $color-strong;
       }
 
       hr {
@@ -272,8 +261,8 @@ body {
       }
 
       mark {
-        background-color: $color-bg-navi-title;
-        color: $color-font-navi;
+        background-color: $color-second-base;
+        color: $color-base;
       }
 
       figure {
@@ -300,8 +289,8 @@ body {
 
       pre,
       code {
-        background-color: $color-bg-code;
-        color: $color-font-code;
+        background-color: $color-second-base;
+        color: $color-base;
       }
 
       code {
@@ -315,7 +304,6 @@ body {
         margin-bottom: 20px;
         margin-bottom: 2.05rem;
         overflow: auto;
-        // color: $color-font-black;
       }
 
       pre code {
@@ -328,8 +316,8 @@ body {
 
       kbd {
         padding: 2px 3px;
-        background-color: $color-bg-code;
-        color: $color-font-code;
+        background-color: $color-second-base;
+        color: $color-base;
       }
 
       blockquote {
@@ -338,7 +326,7 @@ body {
         margin: 0 0 20px;
         margin: 0 0 1.25rem;
         line-height: 1.6;
-        border-left: 5px solid $color-bg-navi-title;
+        border-left: 5px solid $color-second-base;
       }
 
       blockquote p:last-child {
@@ -385,11 +373,11 @@ body {
         width: 100%;
       }
       th {
-        background-color: $color-bg-main-title;
-        color: $color-font-main-title;
+        background-color: $color-second-base;
+        color: $color-base;
       }
       td, th {
-        border: 1px $color-border solid;
+        border: 1px $color-third-base solid;
         padding: 10px;
         box-sizing: border-box;
       }
@@ -439,7 +427,7 @@ body {
       tags, etc..
      */
     .sidebar {
-      background-color: $color-bg-navi;
+      background-color: $color-base;
       margin-left: 10px;
       width: 26%;
       padding-left: 10px;
@@ -455,7 +443,7 @@ body {
         margin-right: 10px;
       }
       a {
-        color: $color-font-navi;
+        color: $color-base;
         font-size: 0.7rem;
       }
       .head {
@@ -469,7 +457,7 @@ body {
         width: 100%;
         padding: 5px 10px 5px 10px;
         box-sizing: border-box;
-        background-color: $color-bg-navi-title;
+        background-color: $color-second-base;
         margin-bottom: 5px;
         @include tab {
           padding: 10px 10px 10px 10px;
@@ -484,14 +472,14 @@ body {
         }
       }
       .title:hover {
-        background-color: $color-link-hover;
+        background-color: $color-strong;
       }
       .tag {
         display: inline-block;
         margin: 0 0 5px 0;
         padding: 5px;
         box-sizing: border-box;
-        background-color: $color-bg-main-title;
+        background-color: $color-second-base;
         @include tab {
           padding: 10px 10px 10px 10px;
         }
@@ -500,7 +488,7 @@ body {
         }
       }
       .tag:hover {
-        background-color: $color-link-hover;
+        background-color: $color-strong;
       }
     }
   }
@@ -514,6 +502,6 @@ body {
   }
   a {
     text-decoration: none;
-    color: $color-link;
+    color: $color-second-base;
   }
 }
