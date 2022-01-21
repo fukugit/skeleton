@@ -30,7 +30,7 @@ After that, you are ready to install Skelton. Go ahead.
 If you don't want to create a new site as in the above step 2, You have two ways of executing this theme. See the below.  
 
 1. You can download the [hugoBasicExample](https://github.com/gohugoio/hugoBasicExample) to run Hugo with Skeleton.  
-1. You can run this theme in [exampleSite](./exampleSite). It is necessary to run the ```git submodule update --init --recursive``` at the folder first.  
+1. You can run this theme in [exampleSite](./exampleSite). 
 
 ### Install Skelton
 ```
@@ -52,6 +52,23 @@ Installation got done!
 To run your Hugo with Skeleton, you can execute the following command.  
 ```
 hugo server
+```
+
+## Update
+If this project is updated while using it in your Hugo blog, you can run the below command to update the latest version.  
+### Update Skeleton
+```
+git submodule update --recursive
+```
+
+## Uninstallation
+If you want to uninstall Skeleton, you can remove it following the below commands.
+### Uninstall Skeleton
+```
+## Move your current directory before executing the below commands.
+git submodule deinit -f themes/skeleton
+git rm -f themes/skeleton
+rm -rf .git/modules/themes/skeleton
 ```
 
 ## GitHub Actions

@@ -5,6 +5,7 @@ theme = "skeleton"
 publishDir = "./docs"
 defaultContentLanguage = "en"
 enableEmoji = true
+paginate = 5
 
 [menu]
 
