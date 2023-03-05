@@ -5,6 +5,7 @@ theme = "skeleton"
 publishDir = "./docs"
 defaultContentLanguage = "en"
 enableEmoji = true
+paginate = 5
 
 [menu]
 
@@ -45,3 +46,6 @@ series = "series"
 
   [services.twitter]
     disableInlineCSS = true
+
+[permalinks]
+    post = "/:year/:month/:slug.html"
