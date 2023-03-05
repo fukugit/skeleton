@@ -46,3 +46,6 @@ series = "series"
 
   [services.twitter]
     disableInlineCSS = true
+
+[permalinks]
+    post = "/:year/:month/:slug.html"
