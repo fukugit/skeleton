@@ -1,7 +1,7 @@
 baseURL = "https://fukugit.github.io/skeleton/"
 title = "Hugo Themes"
 languageCode = "ja-JP"
-theme = "skeleton"
+
 publishDir = "./docs"
 defaultContentLanguage = "en"
 enableEmoji = true
