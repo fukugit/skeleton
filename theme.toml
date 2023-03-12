@@ -1,21 +1,35 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
-
 name = "Skeleton"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
 min_version = "0.41"
 
-[author]
-  name = ""
-  homepage = ""
+baseURL = "https://fukugit.github.io/skeleton/"
+languageCode = "ja-JP"
+title = "Blog"
+publishDir = "docs"
+defaultContentLanguage = "ja"
+enableEmoji = true
 
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+[params]
+  author = "xxx"
+  description = "This is my blog. "
+  github = "xxx"
+  twitter = "xxx"
+  utterances = "github/github.github.io"
+  avatar = "https://avatars1.githubusercontent.com/u/8071941?s=460&v=4"
+  url = "https://github.com/xxx"
+
+  subtitle = "Just another site" # Subtitle of your site. Used in site header
+  copyright = "John Doe" # Footer copyright holder, otherwise will use site title
+  opengraph = true # Enable OpenGraph if true
+  twitter_cards = true # Enable Twitter Cards if true
+
+[Params.widgets.social]
+  # Enable parts of social widget
+  twitter = "xxx"
+  github = "xxx"
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "right"  # Configure layout for list pages
+  single = false # シングルページでサイドカラムを出すか出さないか。今は出さないよ。
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
