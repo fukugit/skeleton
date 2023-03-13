@@ -15,37 +15,37 @@ paginate = 5
     url = "/about/"
     weight = 10
 
-[taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
+# [taxonomies]
+# category = "categories"
+# tag = "tags"
+# series = "series"
 
-[privacy]
+# [privacy]
 
-  [privacy.vimeo]
-    disabled = false
-    simple = true
+#   [privacy.vimeo]
+#     disabled = false
+#     simple = true
 
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
+#   [privacy.twitter]
+#     disabled = false
+#     enableDNT = true
+#     simple = true
 
-  [privacy.instagram]
-    disabled = false
-    simple = true
+#   [privacy.instagram]
+#     disabled = false
+#     simple = true
 
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
+#   [privacy.youtube]
+#     disabled = false
+#     privacyEnhanced = true
 
-[services]
+# [services]
 
-  [services.instagram]
-    disableInlineCSS = true
+#   [services.instagram]
+#     disableInlineCSS = true
 
-  [services.twitter]
-    disableInlineCSS = true
+#   [services.twitter]
+#     disableInlineCSS = true
 
-[permalinks]
-    post = "/:year/:month/:slug.html"
+# [permalinks]
+#     post = "/:year/:month/:slug.html"
