@@ -1,5 +1,5 @@
 # skeleton
-Skeleton is an extremely simple theme for Hugo.  
+The Skeleton is an extremely simple theme for Hugo.  
 
 ![image](./images/screenshot.png)
 
@@ -21,7 +21,7 @@ Even though this theme is straightforward, it has essential features that you mi
 ### Preparation
 Before starting, please be sure that you've already prepared the following.  
 1. Installed Hugo.
-1. Create a new website with Hugo command, which is ```hugo new site XXXX```. 
+1. Create a new website with the Hugo command, which is ```hugo new site XXXX```. 
 1. It is necessary to turn the new site into a git project by executing ```git init``` command.  
 
 After that, you are ready to install Skelton. Go ahead.
