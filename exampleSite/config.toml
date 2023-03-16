@@ -1,19 +1,22 @@
-# baseURL = "https://fukugit.github.io/skeleton/"
-# title = "Hugo Themes"
-# languageCode = "ja-JP"
+baseURL = "https://fukugit.github.io/skeleton/"
+title = "Hugo Themes"
+languageCode = "ja-JP"
 
-# publishDir = "./docs"
-# defaultContentLanguage = "en"
-# enableEmoji = true
-# paginate = 5
+theme = "skeleton"
+themesDir = "../.."
 
-# [menu]
+publishDir = "./docs"
+defaultContentLanguage = "en"
+enableEmoji = true
+paginate = 5
 
-#   [[menu.main]]
-#     identifier = "about"
-#     name = "About"
-#     url = "/about/"
-#     weight = 10
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
 
 # [taxonomies]
 # category = "categories"
