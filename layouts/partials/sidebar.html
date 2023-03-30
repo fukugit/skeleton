@@ -16,7 +16,7 @@
   {{ end }}
 
 
-  {{ $recent := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  <!-- {{ $recent := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{ $recent_num := (.Site.Params.widgets.recent_num | default 10) }}
   {{ if $recent }}
     <div class="head">
@@ -27,7 +27,7 @@
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </div>
     {{ end }}
-  {{ end }}
+  {{ end }} -->
 
 
   {{ $categories := .Site.Taxonomies.categories }}
@@ -37,7 +37,9 @@
     </div>
     {{ range $name, $taxonomy := $categories }}
     {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
-      <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="tag">{{ .Title }}</a>
+      <div class="title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
     {{ end }}
     {{ end }}
   {{ end }}
