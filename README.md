@@ -1,5 +1,5 @@
 # skeleton
-![workflow](https://github.com/fukugit/skeleton/actions/workflows/github-pages.yml/badge.svg)  
+[![workflow](https://github.com/fukugit/skeleton/actions/workflows/github-pages.yml/badge.svg)](https://github.com/fukugit/skeleton/actions)  
 
 The Skeleton is an extremely simple theme for Hugo.  
 
