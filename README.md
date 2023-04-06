@@ -10,7 +10,7 @@ The Skeleton is an extremely simple theme for Hugo.
 ![image](./images/screenshot.png)
 
 ## Demo
-You can see the demo page [here](https://fukugit.github.io/skeleton/).  
+You can see the demo page [here](https://fukugit.github.io/skeleton/).👍  
 
 ## Introduction
 This theme is composed of tiny resources. CSS line is just within 500 lines. The colors of definition in CSS are just four colors.  
