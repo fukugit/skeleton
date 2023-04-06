@@ -1,5 +1,7 @@
 # skeleton
 [![workflow](https://github.com/fukugit/skeleton/actions/workflows/github-pages.yml/badge.svg)](https://github.com/fukugit/skeleton/actions)
+[![License](https://img.shields.io/github/license/fukugit/skeleton)](https://github.com/fukugit/skeleton/blob/main/LICENSE)
+[![LastCommit](https://img.shields.io/github/last-commit/fukugit/skeleton?color=blue)](https://github.com/fukugit/skeleton/commits)
 [![gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
 
 
