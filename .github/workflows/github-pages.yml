@@ -1,4 +1,4 @@
-name: hugo build
+name: CI
 
 on:
   push:
@@ -9,7 +9,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    #runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
 
