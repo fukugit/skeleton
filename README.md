@@ -50,11 +50,8 @@ git submodule update --recursive
 ```
 
 ## Uninstallation
-If you want to uninstall Skeleton, you can remove it following the below commands.  
-
-### Uninstall Skeleton
+Move your current directory then execute the below commands.  
 ```
-## Move your current directory before executing the below commands.
 git submodule deinit -f themes/skeleton
 git rm -f themes/skeleton
 rm -rf .git/modules/themes/skeleton
